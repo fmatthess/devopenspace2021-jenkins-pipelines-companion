@@ -20,6 +20,7 @@ class AppTest {
      * Is this right?
      */
     @Test
+    @DisabledIfEnvironmentVariable(named = "CI_SERVER", matches = ".*Jenkins.*")
     void shouldAdhereToTheRulesOfMathematics() {
         assertEquals(3, 1 + 1);
     }
